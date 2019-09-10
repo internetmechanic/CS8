@@ -1,5 +1,1047 @@
-﻿<html>
-<body>
-  <h1>Hello wirld</h1>
-</body>
-</html>
+
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html lang="en-US" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"87d38be11c","applicationID":"11580779,170779959","transactionName":"JVgLEhBaXg4BSxgTWQFSFkkKVFwGCFxoEFQTUA==","queueTime":48,"applicationTime":481,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"UwMPVVVUGwIBUVlSAAYO"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(23),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(24),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){j++,L=y.hash,this[u]=x.now()}function o(){j--,y.hash!==L&&i(0,!0);var t=x.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=x.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,x=t("loader");if(w[v]&&x.xhrWrappable){var g=t(10),b=t(11),E=t(8),R=t(6),O=t(13),C=t(7),P=t(14),T=t(9),N=t("ee"),S=N.get("tracer");t(16),x.features.spa=!0;var L,j=0;N.on(u,r),N.on(p,r),N.on(d,o),N.on(l,o),N.buffer([u,d,"xhr-done","xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),P.buffer([u,"new-xhr","send-xhr"+s]),C.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),g.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),T.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(P,"send-xhr"+s),a(N,"xhr-resolved"),a(N,"xhr-done"),a(C,m+s),a(C,m+"-done"),a(T,"new-jsonp"),a(T,"jsonp-end"),a(T,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,j>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",x=t("loader");x.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=x.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,x.now()])}),a.on(m,function(t,e,n){this.bstStart=x.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,x.now(),this.bstType])}),s.on(m,function(){this.bstStart=x.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,x.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=x.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(26)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(23);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(26)(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(26)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(26)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(26),a=t("ee").get("promise"),s=i(a),c=t(23),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(26)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(26)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(26)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,g),g.prototype=l.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(){var t=window.NREUM,e=t.info.accountID||null,n=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!e||!n||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:e,ap:n,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&e!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(21);e.exports={generateTraceHeader:r}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(p[r],this.listener,!1);e.aborted||(n.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):a(this,t),n.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return v(r)}function i(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}function a(t,e){t.params.status=e.status;var n=o(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(17),u=t(15).generateTraceHeader,d=t("ee"),p=["load","error","abort","timeout"],l=p.length,h=t("id"),m=t(20),v=t(19),w=window.XMLHttpRequest;s.features.xhr=!0,t(14),d.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){a(e,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=!!NREUM.init.distributed_tracing.enabled),n&&this.sameOrigin){var r=u();r&&e.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=v(r);i&&(n.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{d.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<l;a++)e.addEventListener(p[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,e],e)})}},{}],17:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],18:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(23),s=t(24),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],19:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],20:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],22:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],26:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(24),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[x[n]];return d&&d.push([g,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",x[n]=e,e in u||(u[e]=[])})}var y={},x={},g={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(23),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(23),u=t("ee"),d=t(22),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1130.min.js"},g=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:g,userAgent:d};t(18),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(25)},{}]},{},["loader",2,16,5,3,4]);</script>
+	<title>Riviera Schools | Private Schools in Miami |  Preschool through Grade 12</title>
+		<link rel="icon" href="/uploaded/favicon.ico">
+	<meta name="description" content="Fully accredited and independent Private Schools in Miami,  We are dedicated to providing academic preparation for responsible citizenship. Preschool in coral Gables, Preparatory School in Miami.">
+	<meta name="keywords" content="Private Schools in Miam, Private Preschool in Miami, Private Preparatory School, Private Kindergarten in Coral Gables">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+			<link rel="canonical" href="https://www.rivieraschools.com/">
+			<meta property="og:url" content="https://www.rivieraschools.com/">
+		<meta property="og:description" content="Fully accredited and independent Private Schools in Miami,  We are dedicated to providing academic preparation for responsible citizenship. Preschool in coral Gables, Preparatory School in Miami.">
+
+
+
+	<meta property="og:title" content="Riviera Schools | Private Schools in Miami |  Preschool through Grade 12">
+	<meta property="og:type" content="website">
+
+	<link rel="stylesheet" media="all" href="/assets/application-8ee2d0fbff1569d69ef83c4d6f10fbaebede73f6a912ffd737548439af5e98d6.css" />
+
+	
+
+	<!-- CF Styles Manager -->
+	<link href="/styles.cfm?b" media="screen" rel="stylesheet">
+
+		<link rel="stylesheet" media="all" href="/uploaded/themes/default_17/css/main.css?1534958471" />
+
+	<script src="/assets/in_layout_head-49a75163b68835cb4e0be81700e5027338e69a26cfafb834887c08dd9fb22057.js"></script>
+
+		<script src="https://use.typekit.net/hdt8ogw.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiQx63jLQ3P2xI7XYpIb8NgMmxhrPxDOY"></script>
+
+<meta name="google-site-verification" content="DPFwHTEuYbkrSCq9CkOdQJ8JrmYB1pvnzmoCa9aVUig" />
+		<meta name="google-site-verification" content="KoPmOYSKHbmpRS-9c6vfXlDLv-npeMOtk3c9ZhuCRXU" />
+<meta name="google-site-verification" content="KoPmOYSKHbmpRS-9c6vfXlDLv-npeMOtk3c9ZhuCRXU" />
+
+	<script type="text/javascript">
+		(function(window) {
+			window.FS.currentPage = {
+				dateFormat: 'md',
+				timeFormat: '12'
+			};
+		})(window);
+	</script>
+
+	
+</head>
+<body data-logged-in="false" data-pageid="2" class="fsHasHeader fsHasMenu fsHasFooter fsHasOneColumnLayout home fsHasTheme2">
+
+		<script>
+			dataLayer = [{ 'schoolDomain': 'www.rivieraschools.com' }];
+				dataLayer.push({'uaID': 'UA-56493864-1' });
+
+		</script>
+
+			<noscript>
+				<iframe src="//www.googletagmanager.com/ns.html?id=GTM-P3BGC7"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+			<script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P3BGC7');
+			</script>
+
+
+<div id="fsPageWrapper">
+
+
+
+				<div id="fsMenu">
+					<div class=" fsMenu fsStyleAutoclear" id="fsEl_493" >
+
+			<div class="fsElement fsNavigation fsList mobile-main" id="fsEl_494" data-use-new="true" >
+
+				<header>
+			<div class="fsElementHeaderContent">
+				<a href="/fs/pages/2" data-page-name="Home">Home</a>
+			</div>
+	</header>
+	<div class="fsElementContent">
+		<nav><ul class="fsNavLevel1"><li><a href="/about">About</a></li><li><a href="/admission">Admission</a></li><li><a href="/academics">Academics</a></li><li><a href="/athletics">Athletics</a></li><li><a href="/school-life">School Life</a></li></ul></nav>
+	</div>
+
+
+	</div>
+	<div class="fsElement fsNavigation fsList mobile-utility" id="fsEl_976" data-use-new="true" >
+
+				<div class="fsElementContent">
+		<nav><ul class="fsNavLevel1"><li><a href="/parents-club">Parents Club</a></li><li><a href="http://www.mylocker.net/florida/miami/riviera-preparatory-school/index.html" target="_blank">School Store</a></li><li class="fsNavParentPage"><a href="/summer">Summer</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="/summer/riviera-day-camp">Riviera Day Camp </a></li><li><a href="/summer/summer-school">Summer School</a></li><li><a href="/summer/sports-mini-camp">Sports Mini-Camp</a></li><li><a href="/academics/learning-center">Learning Center</a></li></ul></div></li><li class="fsNavParentPage login-link"><a href="/login">Login</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="/parent">Parents</a></li><li><a href="/student">Students</a></li><li><a href="/faculty">Faculty/Staff</a></li></ul></div></li><li class="search-link"><a href="/search">Search</a></li></ul></nav>
+	</div>
+
+
+	</div>
+	<div class="fsElement fsEmbed top-search" id="fsEl_978" data-use-new="true" >
+
+				<div class="fsElementContent">
+		    <form method="get" action="/search-results">
+    <input type="text" name="q" placeholder="Search for something…">
+    <button type="submit">Search</button>
+</form>
+
+	</div>
+
+
+	</div>
+
+
+
+</div>
+
+
+				</div>
+
+			<header id="fsHeader" class="fsHeader">
+				<div class=" fsBanner fsStyleAutoclear" id="fsEl_7" >
+
+			<div class="fsElement fsEmbed top-search" id="fsEl_1053" data-use-new="true" >
+
+				<div class="fsElementContent">
+		    <form method="get" action="/search-results">
+    <input type="text" name="q" placeholder="Search for something…">
+    <button type="submit">Search</button>
+</form>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsNavigation fsList top-bar" id="fsEl_963" data-use-new="true" >
+
+				<header>
+			<div class="fsElementHeaderContent">
+				<button class="drawer-trigger">Menu</button>
+			</div>
+	</header>
+	<div class="fsElementContent">
+		<nav><ul class="fsNavLevel1"><li><a href="/parents-club">Parents Club</a></li><li><a href="http://www.mylocker.net/florida/miami/riviera-preparatory-school/index.html" target="_blank">School Store</a></li><li class="fsNavParentPage"><a href="/summer">Summer</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="/summer/riviera-day-camp">Riviera Day Camp </a></li><li><a href="/summer/summer-school">Summer School</a></li><li><a href="/summer/sports-mini-camp">Sports Mini-Camp</a></li><li><a href="/academics/learning-center">Learning Center</a></li></ul></div></li><li class="fsNavParentPage login-link"><a href="/login">Login</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="/parent">Parents</a></li><li><a href="/student">Students</a></li><li><a href="/faculty">Faculty/Staff</a></li></ul></div></li><li class="search-link"><a href="/search">Search</a></li></ul></nav>
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContainer header-wrapper" id="fsEl_962" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<div class="fsElement fsContent site-info-container" id="fsEl_69" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<h1><a href="/">School Name</a></h1>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsNavigation fsList nav-main" id="fsEl_70" data-use-new="true" >
+
+				<div class="fsElementContent">
+		<nav><ul class="fsNavLevel1"><li class="fsNavParentPage"><a href="/about">About</a><div class="fsNavPageInfo"><div class="fsNavPageDescription"><h4>About</h4>Founded in 1950, Riviera is a fully accredited, non-sectarian, co-educational, independent day school for preschool through grade twelve.  Riviera has established a reputation for excellence in academia, and for taking a leading role in education and the community.</div><div class="fsNavPageThumbnail"><img alt="Staff Around Tree" src="/uploaded/photos/Home_Page/About/Prep_Campus_Aerial.jpg"></div><ul class="fsNavLevel2"><li><a href="/about/directors-welcome-clone">Director's  Welcome </a></li><li><a href="/about/mission-statement">Mission Statement</a></li><li><a href="/about/history">History</a></li><li><a href="/about/vision">Vision</a></li><li><a href="/about/faculty-staff">Faculty &amp; Staff</a></li><li><a href="/about/accreditation-memberships">Accreditations &amp; Memberships </a></li><li><a href="/about/map-directions">Map &amp; Directions</a></li><li><a href="/about/annual-calendar">Annual Calendar</a></li><li><a href="/about/alumni">Alumni</a></li></ul></div></li><li class="fsNavParentPage"><a href="/admission">Admission</a><div class="fsNavPageInfo"><div class="fsNavPageDescription"><h4>Admission</h4>Welcome to Riviera Schools. Please browse this website to get an in-depth picture of our school. We encourage you to schedule a visit to explore our campuses. We look forward to meeting you!</div><div class="fsNavPageThumbnail"><img alt="students working together" src="/uploaded/photos/Admissions/17044_MIA_0841.jpg"></div><ul class="fsNavLevel2"><li><a href="/admission/application-process">Application Process</a></li><li><a href="/admission/max-and-ruth-cohen-financial-aid-program">Max and Ruth Cohen Financial Aid Program</a></li><li><a href="/admission/online-inquiry-form">Online Inquiry </a></li><li><a href="/admission/tuition-and-fees-2">Tuition and Fees </a></li><li><a href="/admission/online-application-login">Online Application Login</a></li></ul></div></li><li class="fsNavParentPage"><a href="/academics">Academics</a><div class="fsNavPageInfo"><div class="fsNavPageDescription"><h4>Academics</h4>With an emphasis on small classes and a carefully selected and well-trained faculty, we challenge each student to develop his or her full capabilities. Through a multi-modal and multi-sensory approach to teaching and learning, students capitalize on their strengths from preschool through high school. While Riviera encourages cooperation among students, we recognize each person as an individual and support independent thinking.</div><div class="fsNavPageThumbnail"><img alt="Student molding brain" src="/uploaded/photos/Stem/Stem_Hands_Molding_Brain.jpg"></div><ul class="fsNavLevel2"><li><a href="/academics/academic-honors-program">Academic Honors Program</a></li><li><a href="/academics/fine-performing-arts">Fine &amp; Performing Arts</a></li><li><a href="/academics/learning-center">Learning  Center</a></li><li><a href="/academics/stem">STEM</a></li><li><a href="/academics/summer-assignments">Summer Assignments</a></li><li><a href="http://www.rivieraschools.com/academics/technology">Technology</a></li></ul></div></li><li class="fsNavParentPage"><a href="/athletics">Athletics</a><div class="fsNavPageInfo"><div class="fsNavPageDescription"><h4>Athletics</h4>Athletics are a continuation of the classroom, as they promote collaboration, citizenship, hard work, discipline, and commitment. Athletics unite and motivate. They inspire us to achieve. Athletics are an anchor for Bulldog spirit and pride. <br><br></div><div class="fsNavPageThumbnail"><img alt="Girls Volleyball" src="/uploaded/photos/Athletics/Volleyball/Girls_Volleyball_2.jpg"></div><ul class="fsNavLevel2"><li><a href="/athletics/day-school-sports">Day School Sports</a></li><li><a href="/athletics/sports-by-seasons">Prep School Sports </a></li><li><a href="/athletics/physical-education">Physical Education</a></li><li><a href="/athletics/athletics-forms">Athletic Forms</a></li><li><a href="/athletics/prep-school-athletics-calendar">Prep School Athletics Calendar </a></li></ul></div></li><li class="fsNavParentPage"><a href="/school-life">School Life</a><div class="fsNavPageInfo"><div class="fsNavPageDescription"><h4>School Life</h4>The classroom serves as the beginning of each student's educational adventure, but learning extends well beyond the classroom walls. Student life is shaped by the resources available to the students, the support services, and learning experiences both near and far. <br></div><div class="fsNavPageThumbnail"><img alt="Girl Painting" src="/uploaded/photos/School_Life_-_Library/Girl_Painting_Mega_Menu.jpg"></div><ul class="fsNavLevel2"><li><a href="/school-life/beyond-the-classroom">Beyond The Classroom </a></li><li><a href="/school-life/counseling">Counseling</a></li><li><a href="/school-life/we-are-explorers">Exploration</a></li><li><a href="/school-life/extracurricylar-activities">Extracurricular Activities</a></li><li><a href="/school-life/food-services">Food Services</a></li><li><a href="/school-life/libraries">Library</a></li><li><a href="/school-life/support-services">Support Services</a></li><li><a href="/school-life/student-publications">Student Publications</a></li><li><a href="/school-life/rivlife">#RivLife</a></li></ul></div></li></ul></nav>
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</div>
+	<section class="fsElement fsNavigation fsList nav-sub" id="fsEl_1057" data-use-new="true" >
+
+				<header>
+			<h2 class="fsElementTitle">Menu</h2>
+	</header>
+	<div class="fsElementContent">
+		<nav></nav>
+	</div>
+
+
+	</section>
+	<div class="fsElement fsNavigation fsBreadcrumb" id="fsEl_1069" data-use-new="true" >
+
+				<div class="fsElementContent">
+		<nav>
+    <ul>
+        <li>
+			Home
+</li>
+
+    </ul>
+</nav>
+
+	</div>
+
+
+	</div>
+
+
+
+</div>
+
+
+			</header>
+
+		<div id="fsPageBodyWrapper" class="fsPageBodyWrapper">
+			<div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+				<main id="fsPageContent" class="fsPageContent">
+
+
+
+
+							<div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" id="fsEl_2" data-use-new="true" >
+
+				<div class=" fsDiv fsStyleAutoclear" id="fsEl_3"  >
+
+				<div class="fsElement fsMedia fsPlayer hero-slides fsSingleItem" id="fsEl_1085"  >
+
+				<div class="fsElementContent">
+		<div class="fsMediaContainer fsMediaCustomPlayer" data-playlisturl="/cf_endpoints/routes.cfm/media/groups/87/objects.json" data-aspectratio="0.5625" data-playercontrols="0" data-playlistid="87" data-posterscaling="0" data-videoresolution="" data-autoplay="false" data-loop="false" data-randomstart="false">
+</div>
+
+	</div>
+	<footer>
+		<div class="fsElementFooterContent">
+			<a href="#fsEl_1087" class="scroll-link">Scroll</a>
+		</div>
+	</footer>
+
+
+	</div>
+	<section class="fsElement fsPostElement fsList news-slider fsThumbnailLarge fsItemCount_9" id="fsEl_1087" data-use-new="true" >
+
+				<header>
+			<h2 class="fsElementTitle">School News</h2>
+			<div class="fsElementHeaderContent">
+				<a href="/fs/pages/427" data-page-name="All School News ">View All News </a>
+			</div>
+	</header>
+	<div class="fsElementContent">
+		<div class="fsListItems">
+
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="601" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_601">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/bulldogs-giving-back" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1567723436/rivieraschoolscom/qisiyfqnhcafmedprhy8/hurricane2_1.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto/v1567723436/rivieraschoolscom/qisiyfqnhcafmedprhy8/hurricane2_1.jpg&quot;,&quot;width&quot;:284}]" data-aspect-ratio="0.5598591549295775" href="https://www.rivieraschools.com/~board/news/post/bulldogs-giving-back"><img data-aspect-ratio="0.5598591549295775" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1567723436/rivieraschoolscom/qisiyfqnhcafmedprhy8/hurricane2_1.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto/v1567723436/rivieraschoolscom/qisiyfqnhcafmedprhy8/hurricane2_1.jpg&quot;,&quot;width&quot;:284}]" alt="Bulldogs Giving Back"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_601">
+				<a class="fsPostLink" data-slug="news/post/bulldogs-giving-back" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/bulldogs-giving-back">Bulldogs Giving Back</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/bulldogs-giving-back" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/bulldogs-giving-back">
+			Read More
+			<span class="fsStyleSROnly">about Bulldogs Giving Back</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-105" data-post-id="568" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_568">
+
+	<a class="fsThumbnail fsPostLink" data-slug="athletics-awards/post/riviera-prep-athletics-receives-the-sunshine-cup-all-sports-award" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.6666666666666666" href="https://www.rivieraschools.com/~board/athletics-awards/post/riviera-prep-athletics-receives-the-sunshine-cup-all-sports-award"><img data-aspect-ratio="0.6666666666666666" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1566420760/rivieraschoolscom/fuhvbcnxaoeyfbxjk8ak/CollageSportsSample1.jpg&quot;,&quot;width&quot;:2200}]" alt="Riviera Prep Athletics Receives the Sunshine Cup All-Sports Award"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_568">
+				<a class="fsPostLink" data-slug="athletics-awards/post/riviera-prep-athletics-receives-the-sunshine-cup-all-sports-award" data-opens-in="popup" href="https://www.rivieraschools.com/~board/athletics-awards/post/riviera-prep-athletics-receives-the-sunshine-cup-all-sports-award">Riviera Prep Athletics Receives the Sunshine Cup All-Sports Award</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="athletics-awards/post/riviera-prep-athletics-receives-the-sunshine-cup-all-sports-award" data-opens-in="popup" href="https://www.rivieraschools.com/~board/athletics-awards/post/riviera-prep-athletics-receives-the-sunshine-cup-all-sports-award">
+			Read More
+			<span class="fsStyleSROnly">about Riviera Prep Athletics Receives the Sunshine Cup All-Sports Award</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="564" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_564">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/welcome-back-bulldogs" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.6666666666666666" href="https://www.rivieraschools.com/~board/news/post/welcome-back-bulldogs"><img data-aspect-ratio="0.6666666666666666" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1566273330/rivieraschoolscom/ipznczcd9ub11qeqj96h/8-19121.jpg&quot;,&quot;width&quot;:2200}]" alt="Welcome Back Bulldogs!"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_564">
+				<a class="fsPostLink" data-slug="news/post/welcome-back-bulldogs" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/welcome-back-bulldogs">Welcome Back Bulldogs!</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/welcome-back-bulldogs" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/welcome-back-bulldogs">
+			Read More
+			<span class="fsStyleSROnly">about Welcome Back Bulldogs!</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="525" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_525">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/congratulations-class-of-2019" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:2048}]" data-aspect-ratio="0.5732421875" href="https://www.rivieraschools.com/~board/news/post/congratulations-class-of-2019"><img data-aspect-ratio="0.5732421875" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto/v1560199881/rivieraschoolscom/noubzhvpfwjs1haczjsd/19143_MIA_0497.jpg&quot;,&quot;width&quot;:2048}]" alt="Congratulations Class of 2019!"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_525">
+				<a class="fsPostLink" data-slug="news/post/congratulations-class-of-2019" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/congratulations-class-of-2019">Congratulations Class of 2019!</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/congratulations-class-of-2019" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/congratulations-class-of-2019">
+			Read More
+			<span class="fsStyleSROnly">about Congratulations Class of 2019!</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="489" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_489">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/drumline-performance-at-prestigious-gala" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.75" href="https://www.rivieraschools.com/~board/news/post/drumline-performance-at-prestigious-gala"><img data-aspect-ratio="0.75" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1557152503/rivieraschoolscom/dhh1uxmn4kignookptp4/IMG-0196.jpg&quot;,&quot;width&quot;:2200}]" alt="Drumline Performance at Prestigious Gala"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_489">
+				<a class="fsPostLink" data-slug="news/post/drumline-performance-at-prestigious-gala" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/drumline-performance-at-prestigious-gala">Drumline Performance at Prestigious Gala</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/drumline-performance-at-prestigious-gala" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/drumline-performance-at-prestigious-gala">
+			Read More
+			<span class="fsStyleSROnly">about Drumline Performance at Prestigious Gala</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="488" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_488">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/senior-spotlight" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.6666666666666666" href="https://www.rivieraschools.com/~board/news/post/senior-spotlight"><img data-aspect-ratio="0.6666666666666666" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1557146233/rivieraschoolscom/d9wwnqyadudtqtvc4xgx/IMG_8042.jpg&quot;,&quot;width&quot;:2200}]" alt="Senior Spotlight"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_488">
+				<a class="fsPostLink" data-slug="news/post/senior-spotlight" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/senior-spotlight">Senior Spotlight</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/senior-spotlight" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/senior-spotlight">
+			Read More
+			<span class="fsStyleSROnly">about Senior Spotlight</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="487" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_487">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/senior-receives-the-foot-locker-scholar-athlete-scholarship" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.6666666666666666" href="https://www.rivieraschools.com/~board/news/post/senior-receives-the-foot-locker-scholar-athlete-scholarship"><img data-aspect-ratio="0.6666666666666666" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1557143096/rivieraschoolscom/z3djkuelptwoijgjfeo1/IMG_98211.jpg&quot;,&quot;width&quot;:2200}]" alt="Senior Receives the Foot Locker Scholar Athlete Scholarship"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_487">
+				<a class="fsPostLink" data-slug="news/post/senior-receives-the-foot-locker-scholar-athlete-scholarship" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/senior-receives-the-foot-locker-scholar-athlete-scholarship">Senior Receives the Foot Locker Scholar Athlete Scholarship</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/senior-receives-the-foot-locker-scholar-athlete-scholarship" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/senior-receives-the-foot-locker-scholar-athlete-scholarship">
+			Read More
+			<span class="fsStyleSROnly">about Senior Receives the Foot Locker Scholar Athlete Scholarship</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="486" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_486">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/midnight-in-morocco-prom-2019" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.6666666666666666" href="https://www.rivieraschools.com/~board/news/post/midnight-in-morocco-prom-2019"><img data-aspect-ratio="0.6666666666666666" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1556823580/rivieraschoolscom/mixym6beenos6cipaqn6/2019_04_27_RIVP_GPSOH_9648.jpg&quot;,&quot;width&quot;:2200}]" alt="Midnight in Morocco - Prom 2019"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_486">
+				<a class="fsPostLink" data-slug="news/post/midnight-in-morocco-prom-2019" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/midnight-in-morocco-prom-2019">Midnight in Morocco - Prom 2019</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/midnight-in-morocco-prom-2019" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/midnight-in-morocco-prom-2019">
+			Read More
+			<span class="fsStyleSROnly">about Midnight in Morocco - Prom 2019</span>
+</a>
+</article>
+<article class="fsStyleAutoclear fsBoard-3" data-post-id="453" data-authenticated-comments="true" aria-labelledby="fsArticle_1087_453">
+
+	<a class="fsThumbnail fsPostLink" data-slug="news/post/student-government-officers-elect" data-opens-in="popup" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:2200}]" data-aspect-ratio="0.6666666666666666" href="https://www.rivieraschools.com/~board/news/post/student-government-officers-elect"><img data-aspect-ratio="0.6666666666666666" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_5/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1555618911/rivieraschoolscom/vjady3iyuvzhwflrj8gk/IMG_83102.jpg&quot;,&quot;width&quot;:2200}]" alt="Student Government Officers Elect"></img></a>
+
+
+		<div class="fsTitle" id="fsArticle_1087_453">
+				<a class="fsPostLink" data-slug="news/post/student-government-officers-elect" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/student-government-officers-elect">Student Government Officers Elect</a>
+		</div>
+
+	
+
+
+
+
+
+
+
+
+		<a class="fsPostLink fsReadMoreLink" data-slug="news/post/student-government-officers-elect" data-opens-in="popup" href="https://www.rivieraschools.com/~board/news/post/student-government-officers-elect">
+			Read More
+			<span class="fsStyleSROnly">about Student Government Officers Elect</span>
+</a>
+</article>
+
+</div>
+
+
+	</div>
+
+
+	</section>
+	<section class="fsElement fsCalendar fsList event-slider fsItemCount_6" id="fsEl_1127" data-calendar-ids=1007,1006,1010,1009,1008 data-use-new="true" style="background-image: url('/uploaded/themes/default_17/images/events-bg.jpg');" >
+
+				<header>
+			<h2 class="fsElementTitle">Calendars</h2>
+			<div class="fsElementHeaderContent">
+				<a href="/fs/pages/267" data-page-name="Calendar">View Full Calendar</a>
+			</div>
+	</header>
+	<div class="fsElementContent">
+		
+
+	<div class="fsElementControls fsStyleAutoclear">
+
+			<a class="fsCalendarFilter" title="Filters" data-element-id="1127" href="#">
+				<span class="fsCalendarFilterIcon">
+					<span class="fsStyleSROnly">Calendar Filter</span>
+				</span>
+</a>
+
+	</div>
+
+			<div class="fsListItems">
+									<div class="fsDayContainer">
+			<article aria-labelledby="fsArticle_1127_10374" >
+				<time datetime="2019-09-11T19:00:00-04:00" class="fsDate"><span class="fsMonth">Sep</span> <span class="fsDay">11</span> <span class="fsYear">2019</span></time>
+		<div class="fsTitle" id="fsArticle_1127_10374">
+				
+						<a class="fsCalendarEventLink" data-occur-id="10374" href="#">Back to School Night- Grades 6-8</a>
+		</div>
+		<div class="fsEventDetails">
+					<div class="fsTimeRange">
+							<time datetime="2019-09-11T19:00:00-04:00" class="fsStartTime"><span class="fsHour"> 7</span>:<span class="fsMinute">00</span> <span class="fsMeridian">PM</span></time>
+									<span class="fsTimeSeperator"> - </span>
+									<time datetime="2019-09-11T21:00:00-04:00" class="fsEndTime"><span class="fsHour"> 9</span>:<span class="fsMinute">00</span> <span class="fsMeridian">PM</span></time>
+					</div>
+					<div class="fsLocation">Prep School </div>
+		</div>
+</article>
+
+</div>
+
+
+									<div class="fsDayContainer">
+			<article aria-labelledby="fsArticle_1127_10375" >
+				<time datetime="2019-09-12T19:00:00-04:00" class="fsDate"><span class="fsMonth">Sep</span> <span class="fsDay">12</span> <span class="fsYear">2019</span></time>
+		<div class="fsTitle" id="fsArticle_1127_10375">
+				
+						<a class="fsCalendarEventLink" data-occur-id="10375" href="#">Back to School Night- Grades 9-12</a>
+		</div>
+		<div class="fsEventDetails">
+					<div class="fsTimeRange">
+							<time datetime="2019-09-12T19:00:00-04:00" class="fsStartTime"><span class="fsHour"> 7</span>:<span class="fsMinute">00</span> <span class="fsMeridian">PM</span></time>
+									<span class="fsTimeSeperator"> - </span>
+									<time datetime="2019-09-12T21:00:00-04:00" class="fsEndTime"><span class="fsHour"> 9</span>:<span class="fsMinute">00</span> <span class="fsMeridian">PM</span></time>
+					</div>
+					<div class="fsLocation">Prep School</div>
+		</div>
+</article>
+
+</div>
+
+
+									<div class="fsDayContainer">
+			<article aria-labelledby="fsArticle_1127_10907" >
+				<time datetime="2019-09-17T00:00:00-04:00" class="fsDate"><span class="fsMonth">Sep</span> <span class="fsDay">17</span> <span class="fsYear">2019</span></time>
+		<div class="fsTitle" id="fsArticle_1127_10907">
+				
+						<a class="fsCalendarEventLink" data-occur-id="10907" href="#">Picture Day </a>
+		</div>
+		<div class="fsEventDetails">
+		</div>
+</article>
+
+</div>
+
+
+									<div class="fsDayContainer">
+			<article aria-labelledby="fsArticle_1127_10586" >
+				<time datetime="2019-09-20T18:30:00-04:00" class="fsDate"><span class="fsMonth">Sep</span> <span class="fsDay">20</span> <span class="fsYear">2019</span></time>
+		<div class="fsTitle" id="fsArticle_1127_10586">
+				
+						<a class="fsCalendarEventLink" data-occur-id="10586" href="#">Back-to-School Happy Hour </a>
+		</div>
+		<div class="fsEventDetails">
+					<div class="fsTimeRange">
+							<time datetime="2019-09-20T18:30:00-04:00" class="fsStartTime"><span class="fsHour"> 6</span>:<span class="fsMinute">30</span> <span class="fsMeridian">PM</span></time>
+					</div>
+					<div class="fsLocation">Splitsville</div>
+		</div>
+</article>
+
+</div>
+
+
+									<div class="fsDayContainer">
+			<article aria-labelledby="fsArticle_1127_10824" >
+				<time datetime="2019-09-26T18:00:00-04:00" class="fsDate"><span class="fsMonth">Sep</span> <span class="fsDay">26</span> <span class="fsYear">2019</span></time>
+		<div class="fsTitle" id="fsArticle_1127_10824">
+				
+						<a class="fsCalendarEventLink" data-occur-id="10824" href="#">Senior College Night</a>
+		</div>
+		<div class="fsEventDetails">
+					<div class="fsTimeRange">
+							<time datetime="2019-09-26T18:00:00-04:00" class="fsStartTime"><span class="fsHour"> 6</span>:<span class="fsMinute">00</span> <span class="fsMeridian">PM</span></time>
+					</div>
+		</div>
+</article>
+
+</div>
+
+
+									<div class="fsDayContainer">
+			<article aria-labelledby="fsArticle_1127_10371" >
+				<time datetime="2019-09-30T00:00:00-04:00" class="fsDate"><span class="fsMonth">Sep</span> <span class="fsDay">30</span> <span class="fsYear">2019</span></time>
+		<div class="fsTitle" id="fsArticle_1127_10371">
+				
+						<a class="fsCalendarEventLink" data-occur-id="10371" href="#">Teacher Planning Day- School Closed</a>
+		</div>
+		<div class="fsEventDetails">
+					<div class="fsAllDay">all day</div>
+		</div>
+</article>
+
+</div>
+
+
+			</div>
+
+	</div>
+
+
+	</section>
+	<div class="fsElement fsContent offset-image" id="fsEl_1128" data-use-new="true" >
+
+				<header>
+			<div class="fsElementHeaderContent">
+				<a href="#media-playlist-link" data-media-name="We Are Riviera 2018.Mov 171 MB" data-media-playlist-id="137"><img alt="students collaborating" width="780" src="/uploaded/themes/default_17/images/video-bg.jpg"></a>
+			</div>
+	</header>
+	<div class="fsElementContent">
+			<h2>We <em>are</em> Riviera</h2>
+
+<p>The pursuit of academic excellence, the desire to succeed, and the drive to effect positive change in the world define us. Students and faculty work cohesively to set and achieve goals in a setting filled with energy and compassion. At Riviera, we live, play, and work with purpose.</p>
+
+<p>&nbsp;</p>
+
+<p><strong><em>I promise to respect, support, and protect our&nbsp;Riviera family.</em></strong><br />
+Riviera Pledge</p>
+
+<p>&nbsp;</p>
+<script type="application/ld+json"> 
+{
+  "@context": "http://www.schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Riviera Preparatory School",
+  "url": "http://www.rivieraschools.com/",
+  "sameAs": [
+    "https://www.privateschoolreview.com/riviera-schools-profile",
+    "https://www.wikidata.org/wiki/Q30644202",
+    "https://www.yelp.com/biz/riviera-preparatory-school-miami-3",
+    "https://www.greatschools.org/florida/miami/13477-Riviera-Preparatory-School",
+    "https://twitter.com/rivieraschools",
+    "https://www.facebook.com/RivieraSchools",
+    "https://www.instagram.com/rivieraschools/",
+    "https://en.wikipedia.org/wiki/Riviera_Schools",
+    "https://www.niche.com/k12/riviera-preparatory-school-kendall-fl/",
+    "https://plus.google.com/+RivieraPreparatorySchoolMiami"
+  ],
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Riviera_Private_Schools_Logo.jpg/220px-Riviera_Private_Schools_Logo.jpg",
+  "description": "Riviera Schools is a private, independent school with two separate campuses, both in Miami-Dade County, Florida. It is composed of Riviera Day School and Riviera Preparatory School, with the campuses located under four miles apart.[1] The co-educational, college preparatory school serves students from pre-school through 12th grade.\n\nOne of the top private schools Miami has to offer, Riviera is a fully accredited, non-religious day school that serves students from throughout Miami-Dade County.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9775 SW 87th Ave",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "postalCode": "33176",
+    "addressCountry": "USA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-786-300-0300",
+    "contactType": "customer support"
+  }
+}
+ </script>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContainer infographic" id="fsEl_1131" data-use-new="true" >
+
+				<header>
+			<div class="fsElementHeaderContent">
+				<h2>We <em>are</em> Leaders</h2>
+			</div>
+	</header>
+	<div class="fsElementContent">
+			<div class="fsElement fsContent icon-mortarboard" id="fsEl_1132" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>100%</strong>Admission to Four Year Colleges or Universities</p>
+
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent icon-teacher" id="fsEl_1133" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>9:1</strong>Student to Teacher Ratio</p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent icon-athletics" id="fsEl_1134" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>45</strong>Athletic Teams</p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent icon-guidance" id="fsEl_1135" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>5</strong>Guidance Counselors</p>
+
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent icon-mortarboard" id="fsEl_1136" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>58</strong>Countries Represented in our Student Body</p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent icon-mortarboard" id="fsEl_1137" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>24</strong>Advanced Placement Classes</p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent icon-mortarboard" id="fsEl_2031" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>20,000</strong>Community Service Hours </p>
+
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContainer color-slides" id="fsEl_1138" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<div class="fsElement fsContent" id="fsEl_1143" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/Girl_at_Laptop.jpg');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Scholars</h2><p>"Education is the most powerful weapon that you can use to change the world."<br>-Nelson Mandela</p><p><a href="/fs/pages/167" class="fs_style_34" data-page-name="Academics">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1139" data-use-new="true" style="background-image: url('/uploaded/themes/default_17/images/color-slide01.jpg');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Athletes</h2><p>"If you do the work, you get rewarded.  There are no shortcuts in life."<br>-Michael Jordan</p><p><a href="/fs/pages/166" class="fs_style_34" data-page-name="Athletics">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1140" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/Bradley_on_Drums.jpg');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Performers</h2><p>"The stage is not merely the meeting place of all the arts, but is also the return of art to life."<br>-Oscar Wilde</p><p><a href="/fs/pages/187" class="fs_style_34" data-page-name="Fine &amp; Performing Arts">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1141" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/16290_MIA_0601.jpg');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Artists</h2><p>"Every child is an artist.  The problem is how to remain an artist once he grows up."<br>-Pablo Picasso</p><p><a href="/fs/pages/187" class="fs_style_34" data-page-name="Fine &amp; Performing Arts">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1142" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/16297_MIA_1934.jpg');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Innovators</h2><p>"Innovation is the ability to see change as an opportunity, not a threat."<br>-Steve Jobs</p><p><a href="/fs/pages/186" class="fs_style_34" data-page-name="STEM">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1144" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/Breast_Cancer_Walk.JPG');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Humanitarians</h2><p>"The best way to find yourself is to lose yourself in the service of others."<br>-Mahatma Gandhi</p><p><a href="/fs/pages/185" class="fs_style_34" data-page-name="Beyond The Classroom ">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1145" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/Diver2.JPG');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Explorers</h2><p>"Only those who will risk going too far, can possibly find out how far one can go."<br>-T.S. Elliot</p><p><a href="/fs/pages/332" class="fs_style_34" data-page-name="We Are Explorers">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent" id="fsEl_1146" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/Girl_Microscope.jpg');" >
+
+				<div class="fsElementContent">
+			<h2>We <em>are</em> Scientists</h2><p>"Study the science of art. Study the art of science. Develop your senses, and learn how to see. Realize that everything connects to everything else."<br>-Leonardo DaVinci</p><p><a href="/fs/pages/186" class="fs_style_34" data-page-name="STEM">Explore More</a></p>
+
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</div>
+	<section class="fsElement fsContainer family" id="fsEl_1147" data-use-new="true" >
+
+				<header>
+			<h2 class="fsElementTitle">We Are Family</h2>
+	</header>
+	<div class="fsElementContent">
+			<div class="fsElement fsContent family-item" id="fsEl_4128" data-use-new="true" data-image-sizes="[{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1534521885/rivieraschoolscom/s61pr0zkokkcu4nhaum8/IMG_1589.jpg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1534521885/rivieraschoolscom/s61pr0zkokkcu4nhaum8/IMG_1589.jpg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1534521885/rivieraschoolscom/s61pr0zkokkcu4nhaum8/IMG_1589.jpg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;https://resources.finalsite.net/images/f_auto,q_auto/v1534521885/rivieraschoolscom/s61pr0zkokkcu4nhaum8/IMG_1589.jpg&quot;,&quot;width&quot;:960}]" data-aspect-ratio="1.3333333333333333" >
+
+				<div class="fsElementContent">
+			<blockquote>From taking challenging courses, engaging in a unique project, and meeting people with my same passion for STEM, I can say with certainty that I want to study engineering next fall. Though this experience was demanding, it was truly one of the best summers of my life!</blockquote>
+
+<p><a class="fs_style_34" data-page-name="Isabella Siu" href="/fs/pages/463" tabindex="0" target="_blank">READ MY STORY</a></p>
+
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent family-item" id="fsEl_1243" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/victoria_basnuevo.jpg');" >
+
+				<div class="fsElementContent">
+			<blockquote>"To me, Riviera was like another home. Riviera has inspired me to continue doing what I love in both academics and athletics."</blockquote><a href="http://rivieraschoolscom.finalsite.com/cf_media/index.cfm?obj=290" class="fs_style_34" data-media-playlist-id="91" tabindex="0">Watch my Video</a><p> </p><p><br></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent family-item" id="fsEl_1242" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/17145_MIA_0926-Color.jpg');" >
+
+				<div class="fsElementContent">
+			<blockquote>"As parents, we highly recommend Riviera Schools, and we invite all those who are looking for a familial environment to dare to live the experience together with all those who are already part of it."</blockquote>
+<p><a href="/fs/pages/309" class="fs_style_34" data-page-name="Novoa Coccia Family" target="_blank">READ MY STORY</a></p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent family-item" id="fsEl_1244" data-use-new="true" style="background-image: url('/uploaded/photos/Home_Page/Alessandro_Aguirre2.jpg');" >
+
+				<div class="fsElementContent">
+			<blockquote>"My name is Alessandro Aguirre, and I am going into 3rd grade!"<br><br><a href="#media-playlist-link" target="_blank" data-media-name="Alessandro Aguirre" data-media-playlist-id="100"><span class="fs_style_23">Watch my Video</span></a></blockquote><p> </p>
+
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</section>
+	<section class="fsElement fsContainer next-step" id="fsEl_1178" data-use-new="true" style="background-image: url('/uploaded/themes/default_17/images/next-steps.jpg');" >
+
+				<header>
+			<h2 class="fsElementTitle">Ready for the next step?</h2>
+	</header>
+	<div class="fsElementContent">
+			<div class="fsElement fsContent" id="fsEl_1179" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p>We want to hear from you.  Please contact us for more information on how you can become part of the Riviera family.</p>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsNavigation fsList next-step-nav" id="fsEl_1180" data-use-new="true" >
+
+				<div class="fsElementContent">
+		<nav><ul class="fsNavLevel1"><li class="fsNavParentPage"><a href="/inquiry">Online Inquiry</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="http://rs-fl.client.renweb.com/oa/inquiry.cfm?memberid=2273" target="_blank">Grades PK-5</a></li><li><a href="https://rs-fl.client.renweb.com/oa/inquiry.cfm?memberid=2462" target="_blank">Grades 6-12</a></li></ul></div></li><li class="fsNavParentPage"><a href="/apply-now">Apply Now</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="https://rs-fl.client.renweb.com/oa/index.cfm?memberid=2273" target="_blank">Grades PK-5</a></li><li><a href="http://rs-fl.client.renweb.com/oa/?memberid=2462" target="_blank">Grades 6-12</a></li></ul></div></li><li><a href="/admission">Explore Admissions</a></li></ul></nav>
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</section>
+
+
+
+
+	</div>
+
+
+
+
+	</div>
+
+
+
+				</main>
+			</div>
+		</div>
+
+			<footer id="fsFooter" class="fsFooter">
+				<div class=" fsBanner fsStyleAutoclear" id="fsEl_9" >
+
+			<div class="fsElement fsContainer footer-upper" id="fsEl_1073" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<div class="fsElement fsContent" id="fsEl_4123" data-use-new="true" style="background-image: url('/uploaded/themes/default_17/images/riviera_map2.jpg');" >
+
+				<header>
+			<div class="fsElementHeaderContent">
+				<div>
+<style type="text/css">.footer-upper > .fsElementContent > * {
+    background-size: cover;
+    margin: 0;
+  	min-height: 240px;
+}
+  .footer-upper .fsElementHeaderContent {
+    margin: 0;
+  }
+</style>
+</div>
+
+			</div>
+	</header>
+	<div class="fsElementContent">
+			
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContainer utility-container" id="fsEl_1075" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<div class="fsElement fsNavigation fsList nav-social" id="fsEl_1076" data-use-new="true" >
+
+				<div class="fsElementContent">
+		<nav><ul class="fsNavLevel1"><li><a href="http://www.facebook.com/RivieraSchools" target="_blank">Facebook</a></li><li><a href="https://www.instagram.com/rivieraschoolsmiami/" target="_blank">Instagram</a></li></ul></nav>
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent address-container" id="fsEl_1078" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>Riviera Day School<br></strong>Grades PK - 5</p><div id="“PhoneDiv”"><p>6800 Nervia St. · Coral Gables, FL 33146<br>305.666.1856</p></div>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent address-container" id="fsEl_1079" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p><strong>Riviera Preparatory School</strong><br>Grades 6 - 12</p> <div id="“PhoneDiv”"><p>9775 SW 87th Ave. · Miami, FL 33176<br>786.300.0300</p> </div>
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent school-seal" id="fsEl_1080" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<img alt="School Seal" width="163" src="/uploaded/themes/default_17/images/logo-seal-white.svg">
+
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+
+	</div>
+	<div class="fsElement fsContent copyright" id="fsEl_1071" data-use-new="true" >
+
+				<div class="fsElementContent">
+			<p>©2017 Riviera Schools. <a href="/fs/pages/7" data-page-name="Privacy Policy">Privacy Policy</a></p>
+
+<script  async="" src="https://s3.amazonaws.com/phonescript/68168_201608.js"></script>
+
+	</div>
+
+
+	</div>
+
+
+
+
+				<div id="fsPoweredByFinalsite" role="complementary">
+		<div>
+			<a href="https://www.finalsite.com/independent" title="Powered by Finalsite opens in a new window" target="_blank">Powered by Finalsite</a>
+		</div>
+	</div>
+
+</div>
+
+
+			</footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="/assets/application-8d14221cf52fb643fffe3106c7231730f7bc07f03ff117790c9a46394d5950b4.js"></script>
+
+	<script src="/uploaded/themes/default_17/js/main.js?1534958471"></script>
+
+
+
+
+
+</body></html>
